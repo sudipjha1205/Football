@@ -1,13 +1,17 @@
+import React from 'react';
 import logo from './logo.svg';
 import Navbar from './navbar';
 import Homepage from './pages/homepage';
+import Cards from './pages/section/cards';
+
+import "./App.css";
 
 function App() {
   return (
-    <div>
+    <div> 
       <Navbar />
-      <Homepage />
-      <h1>Hello</h1>
+      <Homepage />.
+      <Cards />
     </div>
   );
 }
