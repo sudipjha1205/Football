@@ -3,15 +3,14 @@ import logo from './logo.svg';
 import Navbar from './navbar';
 import Homepage from './pages/homepage';
 import Cards from './pages/section/cards';
+import Route_file from './route';
 
 import "./App.css";
 
 function App() {
   return (
     <div> 
-      <Navbar />
-      <Homepage />.
-      <Cards />
+      <Route_file />
     </div>
   );
 }

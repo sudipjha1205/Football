@@ -3,6 +3,7 @@ import "./homepage.css";
 
 import datas from "../photos/datas.jpg";
 import Matches from "./matches";
+import Navbar from "../navbar";
 
 const Homepage = () => {
 
@@ -187,6 +188,7 @@ const Homepage = () => {
 
     return(
         <div>
+            <Navbar />
             <div class="container-fluid">
                 <div class="col-12 row m-0 p-0 d-flex h-80">
                     <div class="col-md-3">

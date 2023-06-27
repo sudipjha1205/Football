@@ -1,0 +1,31 @@
+.table-style {
+    overflow-x: auto;
+}
+.table-style tr th:first-child {
+    position: sticky;
+    left: 0;
+    z-index: 2;
+}
+
+.dropdown{
+    position: absolute;
+    z-index: 1;
+    color: black;
+    background-color: azure;
+    width: 85%;
+    font-weight: lighter;
+}
+
+.dropdown-row{
+    padding: 2px;
+    cursor: pointer;
+}
+
+.row{
+    position: relative;
+}
+
+
+.search-bar{
+    position: relative;
+}

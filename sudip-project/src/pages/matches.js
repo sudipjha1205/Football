@@ -52,11 +52,11 @@ const Matches = () => {
                 <tr>
                 <th scope="col"></th>
                 <th scope="col" class="d-flex justify-content-center">{league}</th>
-                <th scope="col"></th>
+                <th scope="col">{matchweek}</th>
                 </tr>
             </thead>
-            <tbody class="table-wrapper-scroll-y my-custom-scrollbar">
-                {matches.map(match => 
+            <tbody>
+                {matches && matches.map(match => 
                 <tr>
                 <th scope="row">{match['fixture']['date']}</th>
                 <td class="text-center">{match['teams']['home']['name']} VS {match['teams']['away']['name']}</td>
