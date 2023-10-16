@@ -7,7 +7,7 @@ import { GrNext } from 'react-icons/gr';
 
 import './attack.css';
 
-const Attack = () => {
+const Attack = (props) => {
 
     const [attacker, setAttacker] = useState([]);
     const [defender, setDefender] = useState([]);
@@ -19,7 +19,7 @@ const Attack = () => {
     const [drop, setDrop] = useState(0);
 
     useEffect(() => {
-        fetch('http://127.0.0.1:8000/api/top5leagueattackers/')
+        fetch(`http://127.0.0.1:8000/api/${props.league}/players/attack/`)
            .then((response) => response.json())
            .then((data) => {
               setAttacker(data);
@@ -94,7 +94,7 @@ const Attack = () => {
     return(
         <div>
             <div class="container">
-                <div class="row align-items-center mt-3 mb-2">
+                <div class="row align-items-center mt-5 mb-2">
                     <div class='col-3'>
                         <div class="badge text-wrap fs-5 m-1 p-1.5 b-2 fw-normal d-flex justify-content-start" onClick={() => {setEnd(10);setStart(0);setSearchText('')}}>
                             Offensive Standard Stats
@@ -151,6 +151,7 @@ const Attack = () => {
                         </tbody>
                     </table>
                 </div>
+                <p class="text-white-50">*Sorted by goals plus assists</p>
                 <div class="d-grid gap-2 d-md-flex justify-content-md-end">
                     { (start > 0) ?
                         (<button onClick={() => {decreaseEnd();decreaseStart();}} class="btn btn-outline-secondary" type='button' ><GrPrevious/></button>) :
@@ -161,6 +162,7 @@ const Attack = () => {
                         (<button onClick={() => {increaseEnd();increaseStart();}} class="btn btn-outline-secondary disabled" type='button' ><GrNext/></button>)
                     }
                 </div>
+                <hr class="white-line mt-5" />
             </div>
         </div>
     )

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+<head>
+<title>Table Example</title>
+<link rel="stylesheet" href="{% static 'AppTwo/css/table_style.css' %}" />
+</head>
+<body>
+
+	<h1>Holaaaa!!! Here is the example table of User Record</h1>
+	<div>
+	  {% if users %}
+	  <table>
+	    <thead>
+	      <th>First Name</th>
+	      <th>Last Name</th>
+	      <th>Email</th>
+	    </thead>
+	      {% for acc in users %}
+	        <tr>
+		  <td>{{ acc.first_name }}</td>
+		  <td>{{ acc.last_name }}</td>
+		  <td>{{ acc.email }}</td>
+		</tr>
+	      {% endfor %}
+	  </table>
+	  {% else %}
+	    <p>NO USERS TO SHOW</p>
+	  {% endif %}
+	</div>
+
+</body>
+</html>

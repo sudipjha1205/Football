@@ -1,6 +1,7 @@
 import React from 'react';
 import "./data_tab.css";
 import League_Page from '../pages/data/league_page';
+import Fixtures from './fixtures';
 
 const Data_Tab = () => {
     return(
@@ -16,12 +17,12 @@ const Data_Tab = () => {
                     </div>
                     </nav>
                     <div class="tab-content" id="nav-tabContent">
-                        <div class="tab-pane fade show active" id="nav-top-5" role="tabpanel" aria-labelledby="nav-top-5-tab"><League_Page/></div>
-                        <div class="tab-pane fade" id="nav-premier-league" role="tabpanel" aria-labelledby="nav-premier-league-tab">this is second tab</div>
-                        <div class="tab-pane fade" id="nav-la-liga" role="tabpanel" aria-labelledby="nav-la-liga-tab">this is third tab</div>
-                        <div class="tab-pane fade" id="nav-serie-a" role="tabpanel" aria-labelledby="nav-serie-a-tab">this is fourth tab</div>
-                        <div class="tab-pane fade" id="nav-ligue-1" role="tabpanel" aria-labelledby="nav-ligue-1-tab">this is fifth tab</div>
-                        <div class="tab-pane fade" id="nav-bundesliga" role="tabpanel" aria-labelledby="nav-bundesliga-tab">this is sixth tab</div>
+                        <div class="tab-pane fade show active" id="nav-top-5" role="tabpanel" aria-labelledby="nav-top-5-tab"><Fixtures /></div>
+                        <div class="tab-pane fade" id="nav-premier-league" role="tabpanel" aria-labelledby="nav-premier-league-tab"><Fixtures /></div>
+                        <div class="tab-pane fade" id="nav-la-liga" role="tabpanel" aria-labelledby="nav-la-liga-tab"><Fixtures /></div>
+                        <div class="tab-pane fade" id="nav-serie-a" role="tabpanel" aria-labelledby="nav-serie-a-tab"><Fixtures /></div>
+                        <div class="tab-pane fade" id="nav-ligue-1" role="tabpanel" aria-labelledby="nav-ligue-1-tab"><Fixtures /></div>
+                        <div class="tab-pane fade" id="nav-bundesliga" role="tabpanel" aria-labelledby="nav-bundesliga-tab"><Fixtures /></div>
                     </div>
             </div>
     )

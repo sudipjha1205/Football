@@ -1,0 +1,16 @@
+.fixtures{
+    position: relative;
+    top: 10px;
+}
+
+.nav-link.active{
+    color: black;
+}
+
+.nav-link.active::before {
+    color: black;
+  }
+
+.nav-link:not(.active) {
+    color:beige;
+  }

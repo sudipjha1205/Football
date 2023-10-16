@@ -9,7 +9,7 @@ const Matches = () => {
     const [league,setLeague] = useState('')
 
     const getSeasonRound = async () => {
-        const response = await fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures/rounds?league=140&season=2022&current=true',{
+        const response = await fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures/rounds?league=39&season=2023&current=true',{
 	method: 'GET',
 	headers: {
 		'X-RapidAPI-Key': '627a6337camsh8c2abad82cd70f7p12c64ajsn4f840c2e3905',
@@ -23,7 +23,7 @@ const Matches = () => {
     };
 
     const getMatches = async () => {
-        const response = await fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures?league=140&season=2022&round=Regular%20Season%20-%2038',{
+        const response = await fetch('https://api-football-v1.p.rapidapi.com/v3/fixtures?league=39&season=2023&round=Regular%20Season%20-%2038',{
             method: 'GET',
 	        headers: {
 		        'X-RapidAPI-Key': '627a6337camsh8c2abad82cd70f7p12c64ajsn4f840c2e3905',
@@ -52,7 +52,7 @@ const Matches = () => {
                 <tr>
                 <th scope="col"></th>
                 <th scope="col" class="d-flex justify-content-center">{league}</th>
-                <th scope="col">{matchweek}</th>
+                <th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
